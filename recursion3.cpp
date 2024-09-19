@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int maxValor(double a[], int, double);
+double maxValor(double a[], int, double);
 
 int main(){
 	
@@ -17,14 +17,14 @@ int main(){
 	}
 	
 	double mayor = arreglo[0];
-	double r = maxValor(arreglo, cant, mayor);
+	double r = maxValor(arreglo, cant-1, mayor);
 	
 	cout << "El maximo elemento ingresado es: " << r << endl;
 	
 	return 0;
 }
 
-int maxValor(double a[], int n, double x){
+double maxValor(double a[], int n, double x){
 	
 	if(n==0){
 		return x;
