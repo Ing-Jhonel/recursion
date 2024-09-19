@@ -5,13 +5,13 @@ double buscarValor(double a[], int , double , int);
 
 int main() {
 	
-    int tamanio;
+    int cant, indice=0;
     cout << "Indique la cantidad de elementos: ";
-    cin >> tamanio;
+    cin >> cant;
     
-    double arreglo[tamanio], x;
+    double arreglo[cant], x;
     
-    for(int i=0; i<tamanio; i++){
+    for(int i=0; i<cant; i++){
     	cout << i+1 << ". elementos: ";
     	cin >> arreglo[i];
 	}
@@ -19,10 +19,10 @@ int main() {
     cout << "Ingresa el valor que deseas buscar: ";
     cin >> x;
 
-    double resultado = buscarValor(arreglo, tamanio, x, 0);
+    double p = buscarValor(arreglo, cant, x, indice);
 
-    if (resultado != -1) {
-        cout << "Valor encontrado en la posicion: " << resultado+1 << endl;
+    if (p != -1) {
+        cout << "Valor encontrado en la posicion: " << p+1 << endl;
     } else {
         cout << "Valor no encontrado en el arreglo." << endl;
     }
@@ -30,15 +30,15 @@ int main() {
     return 0;
 }
 
-double buscarValor(double a[], int n, double x, int indice) {
+double buscarValor(double a[], int n, double x, int ind) {
 
-    if (indice == n) {
+    if (ind == n) {
         return -1;
     }
 
-    if (a[indice] == x) {
-        return indice;
+    if (a[ind] == x) {
+        return ind;
     }
 
-    return buscarValor(a, n, x, indice+1);
+    return buscarValor(a, n, x, ind+1);
 }
