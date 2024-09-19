@@ -8,6 +8,7 @@ int main(){
 	int numero;
 	cout << "Ingrese un numero: ";
 	cin >> numero;
+	int invertido = 0;
 	int r=espejo(numero, invertido);
 	cout << "Su imagen especular es: " << r << endl;
 	return 0;
