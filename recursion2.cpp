@@ -1,18 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double buscarValor(double a[], int n, double x, int indice) {
-
-    if (indice == n) {
-        return -1;
-    }
-
-    if (a[indice] == x) {
-        return indice;
-    }
-
-    return buscarValor(a, n, x, indice+1);
-}
+double buscarValor(double a[], int , double , int);
 
 int main() {
 	
@@ -41,3 +30,15 @@ int main() {
     return 0;
 }
 
+double buscarValor(double a[], int n, double x, int indice) {
+
+    if (indice == n) {
+        return -1;
+    }
+
+    if (a[indice] == x) {
+        return indice;
+    }
+
+    return buscarValor(a, n, x, indice+1);
+}
